@@ -9,7 +9,3 @@ $(document).ready(function() {
     $("#response").text("A new alarm has been set for " + newAlarm.hour + ":" + newAlarm.minute);
   });
 });
-
-$(document).ready(function(){
-  $('#time').text(moment());
-});

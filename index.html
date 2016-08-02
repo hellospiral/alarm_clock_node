@@ -4,12 +4,23 @@
     <link rel="stylesheet" href="build/css/vendor.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
-    <title>Ping Pong</title>
+    <title>Alarm Clock:</title>
   </head>
   <body>
     <div class="container">
-      <h3>Well look at the time! </h3>
+      <h3>Current time: </h3>
       <h3 id="time"></h3>
+      <h3>Set an alarm:</h3>
+      <form id="set-alarm-form">
+        <div class="form-group">
+          <label for="hour">Hour:</label>
+          <input id="hour" type="number">
+          <label for="minute">Minute:</label>
+          <input id="minute" type="number">
+          <button class="btn-success" type="submit">Submit</button>
+        </div>
+      </form>
+      <ul id="response"></ul>
     </div>
   </body>
 </html>
