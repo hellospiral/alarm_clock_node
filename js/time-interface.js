@@ -1,3 +1,4 @@
 $(document).ready(function(){
-  $('#time').text(moment());
+  var currentTime = moment().hour() + ":" + moment().minute();
+  $('#time').text(currentTime);
 });
