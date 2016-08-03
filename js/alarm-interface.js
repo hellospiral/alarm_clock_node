@@ -8,13 +8,16 @@ $(document).ready(function() {
     var hour = $("#hour").val();
     var minute = $("#minute").val();
     currentAlarm = new Alarm(hour, minute);
-    $("#response").text("A new alarm has been set for " + currentAlarm.hour + ":" + currentAlarm.minute);
   });
 
-  $("#check-time").submit(function(event) {
-    event.preventDefault();
-    var currentHour = moment().hour();
-    var response = currentAlarm.isItTime();
-    $("#response").text(response);
-  });
+  if (currentAlarm != undefined) {
+    console.log("not undefined");
+  }
+
+  setInterval(function() {
+    if (currentAlarm) {
+      var response = currentAlarm.isItTime();
+      $("#response").html(response);
+    }
+  }, 500);
 });
