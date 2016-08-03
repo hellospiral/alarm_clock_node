@@ -10,10 +10,6 @@ $(document).ready(function() {
     currentAlarm = new Alarm(hour, minute);
   });
 
-  if (currentAlarm != undefined) {
-    console.log("not undefined");
-  }
-
   setInterval(function() {
     if (currentAlarm) {
       var response = currentAlarm.isItTime();
